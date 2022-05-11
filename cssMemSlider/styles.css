@@ -1,1 +1,36 @@
-@import url(../assets/css/normalize.css);
+@import url('./assets/css/normalize.css');
+
+html {
+    font-size: 15px;
+}
+body {
+    background-color: rgba(63, 63, 63, 0.7);
+}
+
+.slider {
+    background-color: rgb(10, 10, 10);
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.slider > input {
+	display: none;
+}
+.slides {
+    height: 80vh;
+    background-repeat: no-repeat;
+}
+
+.slide1 {
+    background-image: url(./assets/images/false1.jpg);
+}
+.slide2 {
+    background-image: url(./assets/images/code_working1.jpg);
+} 
+.slide3 { 
+    background-image: url(./assets/images/GeekStickers.jpg);
+}
+.slide4 {
+    background-image: url(./assets/images/when_coding_is_life.jpg);
+} 
