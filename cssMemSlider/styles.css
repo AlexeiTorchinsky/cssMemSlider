@@ -1,36 +1,112 @@
 @import url('./assets/css/normalize.css');
 
-html {
-    font-size: 15px;
-}
+
 body {
     background-color: rgba(63, 63, 63, 0.7);
 }
 
 .slider {
-    background-color: rgb(10, 10, 10);
-    width: 90%;
-    height: 100vh;
-    margin: 0 auto;
+    background-color: rgb(187, 180, 180);
+    width: 60%;
+    /* height: 100%; */
+    margin: 2rem auto 2rem;
+    
 }
 
-.slider > input {
-	display: none;
+.slider  input {
+	visibility: hidden;
 }
+/* .mem-slides {
+    overflow: hidden;
+} */
 .slides {
+    margin: 0 auto;
     height: 80vh;
-    background-repeat: no-repeat;
+    width:60%;
+   
+    /* background-repeat: no-repeat;
+    background-size: contain; */
+    /* background-position: center; */
 }
 
-.slide1 {
+/* .slide1 {
     background-image: url(./assets/images/false1.jpg);
 }
 .slide2 {
     background-image: url(./assets/images/code_working1.jpg);
 } 
 .slide3 { 
-    background-image: url(./assets/images/GeekStickers.jpg);
+    background-image: url(./assets/images/GeekStickers1.jpg);
 }
 .slide4 {
-    background-image: url(./assets/images/when_coding_is_life.jpg);
+    background-image: url(./assets/images/when_coding_is_life1.jpg);
+}  */
+.meme {
+    display: flex;
+    justify-content: end;
+}
+.controls {
+	display: flex;
+    flex-direction: row;
 } 
+.meme-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+/* .meme:hover {
+    cursor: pointer;
+} */
+.controls label {
+    border: 3px solid #ddd;
+    cursor: pointer;
+    display: inline-block;
+    height: 1rem;
+    /* margin: 25px 12px 0 16px; */
+    width: 1rem;
+    border-radius: 50%;
+}
+.controls label:hover {
+    background-color: #fff;
+} 
+.controls label:active {
+    background-color: rgb(78, 76, 76);
+}   
+.slides-img {
+    display: flex;
+    overflow: hidden;
+}
+.image image {
+    display: inline-block;
+    margin: 0 auto;
+}
+.slide2, .image2, .slide3, .image3, .slide4, .image4{
+    visibility:hidden;
+}
+/* .controls label:hover, 
+slide1:checked ~ .controls label:nth-of-type(1n),
+slide2:checked ~ .controls label:nth-of-type(2n),
+slide3:checked ~ .controls label:nth-of-type(3n),
+slide4:checked ~ .controls label:nth-of-type(4n) {
+	background: #FFF;
+}
+.slides {
+	
+	/* opacity: 0; */
+
+	
+	/* z-index: 0;
+	
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4,
+#slide5:checked ~ .slider > .slide5 {
+	opacity: 1;
+	z-index: 1;
+} */ 
