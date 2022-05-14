@@ -6,107 +6,117 @@ body {
 }
 
 .slider {
-    background-color: rgb(187, 180, 180);
-    width: 60%;
-    /* height: 100%; */
-    margin: 2rem auto 2rem;
-    
+    width: 31.25rem; 
+    margin: 2rem auto 2rem;   
 }
 
 .slider  input {
 	visibility: hidden;
 }
-/* .mem-slides {
-    overflow: hidden;
-} */
+
 .slides {
-    margin: 0 auto;
-    height: 80vh;
-    width:60%;
-   
-    /* background-repeat: no-repeat;
-    background-size: contain; */
-    /* background-position: center; */
+    transition: all 0.5s ease-out;
 }
 
-/* .slide1 {
-    background-image: url(./assets/images/false1.jpg);
-}
-.slide2 {
-    background-image: url(./assets/images/code_working1.jpg);
-} 
-.slide3 { 
-    background-image: url(./assets/images/GeekStickers1.jpg);
-}
-.slide4 {
-    background-image: url(./assets/images/when_coding_is_life1.jpg);
-}  */
 .meme {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
 }
 .controls {
 	display: flex;
     flex-direction: row;
 } 
 .meme-label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2.5rem;
-    height: 2.5rem;
+    
+    width: 2rem;
+    height: 2rem;
+    margin-top: -8px;
+    margin-left: -8px;
     cursor: pointer;
+    transition: all 0.5s ease-out;
 }
-/* .meme:hover {
-    cursor: pointer;
-} */
+.meme-capture_overflow {  
+    display: flex;
+
+} 
+.meme-text{
+    font-family: sans-serif;
+    font-weight: bold ;
+    color: #ddd;
+    margin-top: 0.5rem;
+    white-space: nowrap;
+    transition: all 0.5s ease-out;
+    opacity: 0       
+}
 .controls label {
     border: 3px solid #ddd;
     cursor: pointer;
     display: inline-block;
-    height: 1rem;
-    /* margin: 25px 12px 0 16px; */
+    height: 1rem;  
     width: 1rem;
     border-radius: 50%;
+    margin: 0.3rem;
 }
 .controls label:hover {
-    background-color: #fff;
+    background-color: #ddd;
 } 
+
 .controls label:active {
-    background-color: rgb(78, 76, 76);
-}   
+    
+    transform: scale(0.9);
+}  
+
 .slides-img {
     display: flex;
+    
     overflow: hidden;
-}
-.image image {
-    display: inline-block;
     margin: 0 auto;
 }
-.slide2, .image2, .slide3, .image3, .slide4, .image4{
-    visibility:hidden;
-}
-/* .controls label:hover, 
-slide1:checked ~ .controls label:nth-of-type(1n),
-slide2:checked ~ .controls label:nth-of-type(2n),
-slide3:checked ~ .controls label:nth-of-type(3n),
-slide4:checked ~ .controls label:nth-of-type(4n) {
-	background: #FFF;
-}
-.slides {
-	
-	/* opacity: 0; */
 
-	
-	/* z-index: 0;
-	
-	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+
+#input1:checked ~ .meme > .controls > .label1  {
+    background: #fff;
+    transform: scale(1.1);
 }
-#slide1:checked ~ .slider > .slide1,
-#slide2:checked ~ .slider > .slide2,
-#slide3:checked ~ .slider > .slide3,
-#slide4:checked ~ .slider > .slide4,
-#slide5:checked ~ .slider > .slide5 {
-	opacity: 1;
-	z-index: 1;
-} */ 
+#input2:checked ~ .meme > .controls > .label2  {
+    background: #fff;
+    transform: scale(1.1);
+}
+#input3:checked ~ .meme > .controls > .label3  {
+    background: #fff;
+    transform: scale(1.1);
+}
+#input4:checked ~ .meme > .controls > .label4  {
+    background: #fff;
+    transform: scale(1.1);
+}
+
+#input1:checked ~ .slides-img > .slide1 {
+    margin-left: 0;
+}
+#input2:checked ~ .slides-img > .slide1 {
+    margin-left: -100%;
+}
+#input3:checked ~ .slides-img > .slide1 {
+    margin-left: -200%;
+}
+#input4:checked ~ .slides-img > .slide1 {
+    margin-left: -300%;
+}
+
+#input1:checked ~ .meme > .meme-capture_overflow > .text1 {
+    opacity: 1;
+}
+#input2:checked ~ .meme > .meme-capture_overflow > .text2 {
+    opacity: 1;
+    margin-left: -25%;
+    
+}
+#input3:checked ~ .meme > .meme-capture_overflow > .text3 {
+    opacity: 1;
+    margin-left: -50%;
+}
+#input4:checked ~ .meme > .meme-capture_overflow > .text4 {
+    opacity: 1;
+    margin-left: -73%;
+}
